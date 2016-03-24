@@ -1,0 +1,32 @@
+PODS:
+  - Expecta (1.0.3)
+  - Expecta+Snapshots (2.0.0):
+    - Expecta (~> 1.0)
+    - FBSnapshotTestCase/Core (~> 2.0.3)
+  - FBSnapshotTestCase (2.0.6):
+    - FBSnapshotTestCase/SwiftSupport (= 2.0.6)
+  - FBSnapshotTestCase/Core (2.0.6)
+  - FBSnapshotTestCase/SwiftSupport (2.0.6):
+    - FBSnapshotTestCase/Core
+  - Specta (1.0.4)
+  - WordPress-Editor-iOS-Extension (0.1.0)
+
+DEPENDENCIES:
+  - Expecta
+  - Expecta+Snapshots
+  - FBSnapshotTestCase
+  - Specta
+  - WordPress-Editor-iOS-Extension (from `../`)
+
+EXTERNAL SOURCES:
+  WordPress-Editor-iOS-Extension:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Expecta: 9d1bff6c8b0eeee73a166a2ee898892478927a15
+  Expecta+Snapshots: 29b38dd695bc72a0ed2bea833937d78df41943ba
+  FBSnapshotTestCase: f53793e19b2782f2948e8597b03ec2bb5aedf5cd
+  Specta: 69bb134672aae190a1379ff91df07dad8dd1f869
+  WordPress-Editor-iOS-Extension: 3050100ddf577368e43d435c1736e9a66dcd3fcc
+
+COCOAPODS: 0.39.0

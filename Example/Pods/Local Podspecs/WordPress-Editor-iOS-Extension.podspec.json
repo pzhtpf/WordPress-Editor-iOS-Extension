@@ -1,0 +1,25 @@
+{
+  "name": "WordPress-Editor-iOS-Extension",
+  "version": "0.1.0",
+  "summary": "A short description of WordPress-Editor-iOS-Extension.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/WordPress-Editor-iOS-Extension",
+  "license": "MIT",
+  "authors": {
+    "pzhtpf": "389744841@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/WordPress-Editor-iOS-Extension.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "WordPress-Editor-iOS-Extension": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
