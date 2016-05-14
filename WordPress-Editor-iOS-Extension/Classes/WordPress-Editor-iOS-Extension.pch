@@ -1,0 +1,40 @@
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#endif
+
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
+
+@import WordPressShared;
+@import WordPressComAnalytics;
+@import UIAlertView_Blocks;
+
+#ifndef IS_IPAD
+#define IS_IPAD   ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
+#endif
+#ifndef IS_IPHONE
+#define IS_IPHONE   (!IS_IPAD)
+#endif
+#ifndef IS_RETINA
+#define IS_RETINA ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] && [[UIScreen mainScreen] scale] == 2)
+#endif
+
+#endif
+
+#define UIColorFromRGB(rgbValue)        [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define BASECOLOR UIColorFromRGB(0X25be65)
+
+#define CustomLocalisedString(key,description)    [TSLanguageManager localizedString:key]
+#define contains(str1, str2) ([str1 rangeOfString: str2 ].location != NSNotFound)
+#define Domain                          @"api.ougohome.com"
+#define BASEURL                         @"http://api.ougohome.com/index.php/"
