@@ -1,0 +1,14 @@
+use_frameworks!
+
+target 'WordPress-Editor-iOS-Extension_Example' do
+  pod 'WordPress-Editor-iOS-Extension', :path => '../'
+
+  target 'WordPress-Editor-iOS-Extension_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+  pod 'Expecta'
+  pod 'FBSnapshotTestCase'
+  pod 'Expecta+Snapshots'
+  end
+end
