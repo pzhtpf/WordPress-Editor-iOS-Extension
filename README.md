@@ -32,6 +32,14 @@ it, simply add the following line to your Podfile:
 pod "WordPress-Editor-iOS-Extension"
 ```
 
+##Usage
+
+1. 你可以设置工具栏的主体色(you can set itemTintColor)
+     
+```
+self.itemTintColor = [UIColor redColor];
+```
+
 ## Author
 
 tianpengfei, 389744841@qq.com
