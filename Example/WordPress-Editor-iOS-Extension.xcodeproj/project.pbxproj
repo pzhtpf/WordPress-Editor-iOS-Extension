@@ -32,6 +32,7 @@
 		BA70A29B1CE7707300333A2F /* WPEditorDemoLoggingConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BA70A28F1CE7707300333A2F /* WPEditorDemoLoggingConfiguration.m */; };
 		BA70A29C1CE7707300333A2F /* WPImageMetaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA70A2911CE7707300333A2F /* WPImageMetaViewController.m */; };
 		BA70A29D1CE7707300333A2F /* WPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA70A2931CE7707300333A2F /* WPViewController.m */; };
+		BAD0106C1CEC941800BB68B6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAD0106E1CEC941800BB68B6 /* Localizable.strings */; };
 		F82EA665081E8B727BFFF7C6 /* Pods_WordPress_Editor_iOS_Extension_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA949489FD4CC72C4899B93 /* Pods_WordPress_Editor_iOS_Extension_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,13 @@
 		BA70A2911CE7707300333A2F /* WPImageMetaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPImageMetaViewController.m; sourceTree = "<group>"; };
 		BA70A2921CE7707300333A2F /* WPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPViewController.h; sourceTree = "<group>"; };
 		BA70A2931CE7707300333A2F /* WPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPViewController.m; sourceTree = "<group>"; };
+		BAD010681CEC93EA00BB68B6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		BAD010691CEC93EA00BB68B6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		BAD0106A1CEC93F300BB68B6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		BAD0106B1CEC93F300BB68B6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		BAD0106D1CEC941800BB68B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BAD0106F1CEC941C00BB68B6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BAD010701CEC941E00BB68B6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D3442A2B4EE10D4B486EDF13 /* Pods-WordPress-Editor-iOS-Extension_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordPress-Editor-iOS-Extension_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordPress-Editor-iOS-Extension_Example/Pods-WordPress-Editor-iOS-Extension_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E9D73E773837619D660594A2 /* Pods-WordPress-Editor-iOS-Extension_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordPress-Editor-iOS-Extension_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordPress-Editor-iOS-Extension_Example/Pods-WordPress-Editor-iOS-Extension_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,6 +198,7 @@
 			children = (
 				6003F595195388D20070C39A /* WordPress-Editor-iOS-Extension-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
+				BAD0106E1CEC941800BB68B6 /* Localizable.strings */,
 				6003F599195388D20070C39A /* main.m */,
 				6003F59B195388D20070C39A /* WordPress-Editor-iOS-Extension-Prefix.pch */,
 			);
@@ -327,6 +336,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 6003F581195388D10070C39A;
 			productRefGroup = 6003F58B195388D20070C39A /* Products */;
@@ -345,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				BAD0106C1CEC941800BB68B6 /* Localizable.strings in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -497,6 +509,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				6003F597195388D20070C39A /* en */,
+				BAD010681CEC93EA00BB68B6 /* zh-Hans */,
+				BAD0106A1CEC93F300BB68B6 /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -505,9 +519,21 @@
 			isa = PBXVariantGroup;
 			children = (
 				6003F5B9195388D20070C39A /* en */,
+				BAD010691CEC93EA00BB68B6 /* zh-Hans */,
+				BAD0106B1CEC93F300BB68B6 /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
+		};
+		BAD0106E1CEC941800BB68B6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAD0106D1CEC941800BB68B6 /* en */,
+				BAD0106F1CEC941C00BB68B6 /* zh-Hans */,
+				BAD010701CEC941E00BB68B6 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 
@@ -597,6 +623,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -613,6 +640,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
