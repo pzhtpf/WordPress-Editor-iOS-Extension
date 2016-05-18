@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  WordPress-Editor-iOS-Extension
+
+  Created by tianpengfei on 16/5/18.
+  Copyright © 2016年 tianpengfei. All rights reserved.
+*/
+
+"sureToSaveDraft" = "是否保存草稿？";
+"published" = "發表";
+"pleaseInputMessage" = "說點什麼吧";
+"published" = "發表";
+"pleaseInputTitle" = "請輸入標題";
+"photoLibrary" = "從相册中選擇";
+"takePhoto" = "拍照";
+"insertImageFromInternet" = "插入網絡圖片";
+"isPublishedArticle" = "是否發表？";
+"savedToDraftBox" = "已保存至草稿箱";
+"publishedArticle" = "發表文章";

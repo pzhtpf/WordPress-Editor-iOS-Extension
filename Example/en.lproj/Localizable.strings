@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  WordPress-Editor-iOS-Extension
+
+  Created by tianpengfei on 16/5/18.
+  Copyright © 2016年 tianpengfei. All rights reserved.
+*/
+
+"sureToSaveDraft" = "Save drafts?";
+"published" = "Published";
+"pleaseInputMessage" = "Please enter the message";
+"published" = "Published";
+"pleaseInputTitle" = "Please enter the title";
+"photoLibrary" = "Photo Library";
+"takePhoto" = "Take Photo";
+"insertImageFromInternet" = "Insert Network Image";
+"isPublishedArticle" = "Published the article?";
+"savedToDraftBox" = "saved to draft box.";
+"publishedArticle" = "Published Article";
