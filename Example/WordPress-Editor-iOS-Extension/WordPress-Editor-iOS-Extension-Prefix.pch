@@ -15,9 +15,6 @@
     @import Foundation;
 #endif
 
-#import "TSLanguageManager.h"
 
-
-#define CustomLocalisedString(key,description)    [TSLanguageManager localizedString:key]
 #define Domain                          @"api.ougohome.com"
 #define BASEURL                         @"http://api.ougohome.com/index.php/"

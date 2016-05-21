@@ -26,37 +26,37 @@
     _selectData = [[defaults valueForKey:@"ZSSRichTextEditorToolbarSaveKey"] mutableCopy];
 
     
-    _allItemsDatas = @[@{@"icon":@"icon_format_media",@"title":NSLocalizedString(@"insertMedia", @"插入图片或视频"),@"key":@(ZSSRichTextEditorToolbarInsertImage)},
-                       @{@"icon":@"icon_format_bold",@"title":NSLocalizedString(@"bold", @"粗体"),@"key":@(ZSSRichTextEditorToolbarBold)},
-                       @{@"icon":@"icon_format_italic",@"title":NSLocalizedString(@"italic", @"斜体"),@"key":@(ZSSRichTextEditorToolbarItalic)},
-                       @{@"icon":@"ZSSsubscript",@"title":NSLocalizedString(@"subscript", @"下标"),@"key":@(ZSSRichTextEditorToolbarSubscript)},
-                       @{@"icon":@"ZSSsuperscript",@"title":NSLocalizedString(@"superscript", @"上标"),@"key":@(ZSSRichTextEditorToolbarSuperscript)},
-                       @{@"icon":@"icon_format_strikethrough",@"title":NSLocalizedString(@"strikethrough", @"删除线"),@"key":@(ZSSRichTextEditorToolbarStrikeThrough)},
-                       @{@"icon":@"icon_format_underline",@"title":NSLocalizedString(@"underline", @"下划线"),@"key":@(ZSSRichTextEditorToolbarUnderline)},
-                       @{@"icon":@"ZSSclearstyle",@"title":NSLocalizedString(@"RemoveFormat", @"清除格式"),@"key":@(ZSSRichTextEditorToolbarRemoveFormat)},
-                       @{@"icon":@"ZSSleftjustify",@"title":NSLocalizedString(@"justifyleft", @"左对齐"),@"key":@(ZSSRichTextEditorToolbarJustifyLeft)},
-                       @{@"icon":@"ZSScenterjustify",@"title":NSLocalizedString(@"justifycenter", @"居中"),@"key":@(ZSSRichTextEditorToolbarJustifyCenter)},
-                       @{@"icon":@"ZSSrightjustify",@"title":NSLocalizedString(@"justifyright", @"右对齐"),@"key":@(ZSSRichTextEditorToolbarJustifyRight)},
-                       @{@"icon":@"ZSSforcejustify",@"title":NSLocalizedString(@"justifyfull", @"两端对齐"),@"key":@(ZSSRichTextEditorToolbarJustifyFull)},
-                       @{@"icon":@"ZSSh1",@"title":NSLocalizedString(@"H1", @"一级标题"),@"key":@(ZSSRichTextEditorToolbarH1)},
-                       @{@"icon":@"ZSSh2",@"title":NSLocalizedString(@"H2", @"二级标题"),@"key":@(ZSSRichTextEditorToolbarH2)},
-                       @{@"icon":@"ZSSh3",@"title":NSLocalizedString(@"H3", @"三级标题"),@"key":@(ZSSRichTextEditorToolbarH3)},
-                       @{@"icon":@"ZSSh4",@"title":NSLocalizedString(@"H4", @"四级标题"),@"key":@(ZSSRichTextEditorToolbarH4)},
-                       @{@"icon":@"ZSSh5",@"title":NSLocalizedString(@"H5", @"五级标题"),@"key":@(ZSSRichTextEditorToolbarH5)},
-                       @{@"icon":@"ZSSh6",@"title":NSLocalizedString(@"H6", @"六级标题"),@"key":@(ZSSRichTextEditorToolbarH6)},
-                       @{@"icon":@"ZSStextcolor",@"title":NSLocalizedString(@"textcolor", @"文字颜色"),@"key":@(ZSSRichTextEditorToolbarTextColor)},
-                       @{@"icon":@"ZSSbgcolor",@"title":NSLocalizedString(@"backgroundcolor", @"背景颜色"),@"key":@(ZSSRichTextEditorToolbarBackgroundColor)},
-                       @{@"icon":@"icon_format_ul",@"title":NSLocalizedString(@"UnorderedList", @"无序列表"),@"key":@(ZSSRichTextEditorToolbarUnorderedList)},
-                       @{@"icon":@"icon_format_ol",@"title":NSLocalizedString(@"OrderedList", @"有序列表"),@"key":@(ZSSRichTextEditorToolbarOrderedList)},
-                       @{@"icon":@"ZSShorizontalrule",@"title":NSLocalizedString(@"HorizontalRule", @"插入水平线"),@"key":@(ZSSRichTextEditorToolbarHorizontalRule)},
-                       @{@"icon":@"ZSSindent",@"title":NSLocalizedString(@"Indent", @"缩进"),@"key":@(ZSSRichTextEditorToolbarIndent)},
-                       @{@"icon":@"ZSSoutdent",@"title":NSLocalizedString(@"Outdent", @"减少缩进"),@"key":@(ZSSRichTextEditorToolbarOutdent)},
-                       @{@"icon":@"icon_format_link",@"title":NSLocalizedString(@"InsertLink", @"插入链接"),@"key":@(ZSSRichTextEditorToolbarInsertLink)},
-                       @{@"icon":@"icon_format_unlink",@"title":NSLocalizedString(@"RemoveLink", @"移除链接"),@"key":@(ZSSRichTextEditorToolbarRemoveLink)},
-                       @{@"icon":@"ZSSquicklink",@"title":NSLocalizedString(@"QuickLink", @"快速链接"),@"key":@(ZSSRichTextEditorToolbarQuickLink)},
-                       @{@"icon":@"ZSSundo",@"title":NSLocalizedString(@"Undo", @"撤销"),@"key":@(ZSSRichTextEditorToolbarUndo)},
-                       @{@"icon":@"ZSSredo",@"title":NSLocalizedString(@"Redo", @"重做"),@"key":@(ZSSRichTextEditorToolbarRedo)},
-                       @{@"icon":@"icon_format_quote",@"title":NSLocalizedString(@"BlockQuote", @"引用"),@"key":@(ZSSRichTextEditorToolbarBlockQuote)}
+    _allItemsDatas = @[@{@"icon":@"icon_format_media",@"title":CustomLocalisedString(@"insertMedia", @"插入图片或视频"),@"key":@(ZSSRichTextEditorToolbarInsertImage)},
+                       @{@"icon":@"icon_format_bold",@"title":CustomLocalisedString(@"bold", @"粗体"),@"key":@(ZSSRichTextEditorToolbarBold)},
+                       @{@"icon":@"icon_format_italic",@"title":CustomLocalisedString(@"italic", @"斜体"),@"key":@(ZSSRichTextEditorToolbarItalic)},
+                       @{@"icon":@"ZSSsubscript",@"title":CustomLocalisedString(@"subscript", @"下标"),@"key":@(ZSSRichTextEditorToolbarSubscript)},
+                       @{@"icon":@"ZSSsuperscript",@"title":CustomLocalisedString(@"superscript", @"上标"),@"key":@(ZSSRichTextEditorToolbarSuperscript)},
+                       @{@"icon":@"icon_format_strikethrough",@"title":CustomLocalisedString(@"strikethrough", @"删除线"),@"key":@(ZSSRichTextEditorToolbarStrikeThrough)},
+                       @{@"icon":@"icon_format_underline",@"title":CustomLocalisedString(@"underline", @"下划线"),@"key":@(ZSSRichTextEditorToolbarUnderline)},
+                       @{@"icon":@"ZSSclearstyle",@"title":CustomLocalisedString(@"RemoveFormat", @"清除格式"),@"key":@(ZSSRichTextEditorToolbarRemoveFormat)},
+                       @{@"icon":@"ZSSleftjustify",@"title":CustomLocalisedString(@"justifyleft", @"左对齐"),@"key":@(ZSSRichTextEditorToolbarJustifyLeft)},
+                       @{@"icon":@"ZSScenterjustify",@"title":CustomLocalisedString(@"justifycenter", @"居中"),@"key":@(ZSSRichTextEditorToolbarJustifyCenter)},
+                       @{@"icon":@"ZSSrightjustify",@"title":CustomLocalisedString(@"justifyright", @"右对齐"),@"key":@(ZSSRichTextEditorToolbarJustifyRight)},
+                       @{@"icon":@"ZSSforcejustify",@"title":CustomLocalisedString(@"justifyfull", @"两端对齐"),@"key":@(ZSSRichTextEditorToolbarJustifyFull)},
+                       @{@"icon":@"ZSSh1",@"title":CustomLocalisedString(@"H1", @"一级标题"),@"key":@(ZSSRichTextEditorToolbarH1)},
+                       @{@"icon":@"ZSSh2",@"title":CustomLocalisedString(@"H2", @"二级标题"),@"key":@(ZSSRichTextEditorToolbarH2)},
+                       @{@"icon":@"ZSSh3",@"title":CustomLocalisedString(@"H3", @"三级标题"),@"key":@(ZSSRichTextEditorToolbarH3)},
+                       @{@"icon":@"ZSSh4",@"title":CustomLocalisedString(@"H4", @"四级标题"),@"key":@(ZSSRichTextEditorToolbarH4)},
+                       @{@"icon":@"ZSSh5",@"title":CustomLocalisedString(@"H5", @"五级标题"),@"key":@(ZSSRichTextEditorToolbarH5)},
+                       @{@"icon":@"ZSSh6",@"title":CustomLocalisedString(@"H6", @"六级标题"),@"key":@(ZSSRichTextEditorToolbarH6)},
+                       @{@"icon":@"ZSStextcolor",@"title":CustomLocalisedString(@"textcolor", @"文字颜色"),@"key":@(ZSSRichTextEditorToolbarTextColor)},
+                       @{@"icon":@"ZSSbgcolor",@"title":CustomLocalisedString(@"backgroundcolor", @"背景颜色"),@"key":@(ZSSRichTextEditorToolbarBackgroundColor)},
+                       @{@"icon":@"icon_format_ul",@"title":CustomLocalisedString(@"UnorderedList", @"无序列表"),@"key":@(ZSSRichTextEditorToolbarUnorderedList)},
+                       @{@"icon":@"icon_format_ol",@"title":CustomLocalisedString(@"OrderedList", @"有序列表"),@"key":@(ZSSRichTextEditorToolbarOrderedList)},
+                       @{@"icon":@"ZSShorizontalrule",@"title":CustomLocalisedString(@"HorizontalRule", @"插入水平线"),@"key":@(ZSSRichTextEditorToolbarHorizontalRule)},
+                       @{@"icon":@"ZSSindent",@"title":CustomLocalisedString(@"Indent", @"缩进"),@"key":@(ZSSRichTextEditorToolbarIndent)},
+                       @{@"icon":@"ZSSoutdent",@"title":CustomLocalisedString(@"Outdent", @"减少缩进"),@"key":@(ZSSRichTextEditorToolbarOutdent)},
+                       @{@"icon":@"icon_format_link",@"title":CustomLocalisedString(@"InsertLink", @"插入链接"),@"key":@(ZSSRichTextEditorToolbarInsertLink)},
+                       @{@"icon":@"icon_format_unlink",@"title":CustomLocalisedString(@"RemoveLink", @"移除链接"),@"key":@(ZSSRichTextEditorToolbarRemoveLink)},
+                       @{@"icon":@"ZSSquicklink",@"title":CustomLocalisedString(@"QuickLink", @"快速链接"),@"key":@(ZSSRichTextEditorToolbarQuickLink)},
+                       @{@"icon":@"ZSSundo",@"title":CustomLocalisedString(@"Undo", @"撤销"),@"key":@(ZSSRichTextEditorToolbarUndo)},
+                       @{@"icon":@"ZSSredo",@"title":CustomLocalisedString(@"Redo", @"重做"),@"key":@(ZSSRichTextEditorToolbarRedo)},
+                       @{@"icon":@"icon_format_quote",@"title":CustomLocalisedString(@"BlockQuote", @"引用"),@"key":@(ZSSRichTextEditorToolbarBlockQuote)}
                        ];
     
     [self initView];
@@ -83,14 +83,14 @@
     
     
     UIButton *save = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-60, 20,60, 44)];
-    [save setTitle:NSLocalizedString(@"save", @"保存") forState:UIControlStateNormal];
+    [save setTitle:CustomLocalisedString(@"save", @"保存") forState:UIControlStateNormal];
     [save setTitleColor:UIColorFromRGB(0x007AFF) forState:UIControlStateNormal];
     [save addTarget:self action:@selector(saveAction:) forControlEvents:UIControlEventTouchUpInside];
     save.titleLabel.font = [UIFont systemFontOfSize:15.0f];
     [self.view addSubview:save];
     
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2-40, 20, 80, 44)];
-    title.text = NSLocalizedString(@"more", @"更多");
+    title.text = CustomLocalisedString(@"more", @"更多");
     title.textAlignment = NSTextAlignmentCenter;
     title.font = [UIFont systemFontOfSize:17.0f];
     title.textColor = [UIColor whiteColor];

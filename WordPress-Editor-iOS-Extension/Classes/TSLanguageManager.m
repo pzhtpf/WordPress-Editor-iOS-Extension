@@ -56,11 +56,12 @@
     NSString *selectedLanguage = [TSLanguageManager selectedLanguage];
     
     // Get the corresponding bundle path.
-	NSString *path = [[NSBundle mainBundle] pathForResource:selectedLanguage ofType:@"lproj"];
+    
+     NSString *path = [[NSBundle bundleForClass:[TSLanguageManager class]] pathForResource:selectedLanguage ofType:@"lproj"];
     
     // Get the corresponding localized string.
     NSBundle* languageBundle = [NSBundle bundleWithPath:path];
-	NSString* str = [languageBundle localizedStringForKey:key value:@"" table:nil];
+	NSString* str = [languageBundle localizedStringForKey:key value:@"" table:@"WordPress-Editor-iOS-Extension_Localizable"];
     return str;
 }
 

@@ -3,6 +3,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "publishedArticleViewModel.h"
 #import "WYPopoverController.h"
+#import "WPEditorConfiguration.h"
 
 @interface WPViewController : WPEditorViewController <WPEditorViewControllerDelegate,UIActionSheetDelegate,WYPopoverControllerDelegate>
 @property(nonatomic,retain)publishedArticleViewModel *viewModel;

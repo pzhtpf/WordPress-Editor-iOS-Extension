@@ -1,0 +1,45 @@
+/* 
+  WordPress-Editor-iOS-Extension_Localizable.strings
+  Pods
+
+  Created by tianpengfei on 16/5/21.
+
+*/
+"insertMedia" = "插入圖片視頻";
+"bold" = "粗體";
+"italic" = "斜體";
+"subscript" = "下標";
+"superscript" = "上標";
+"strikethrough" = "删除線";
+"underline" = "底線";
+"RemoveFormat" = "清除格式";
+"justifyleft" = "左對齊";
+"justifycenter" = "居中";
+"justifyright" = "右對齊";
+"justifyfull" = "兩端對齊";
+"H1" = "一級標題";
+"H2" = "二級標題";
+"H3" = "三級標題";
+"H4" = "四級標題";
+"H5" = "五級標題";
+"H6" = "六級標題";
+"textcolor" = "文字顏色";
+"backgroundcolor" = "背景顏色";
+"UnorderedList" = "無序列錶";
+"OrderedList" = "有序列錶";
+"HorizontalRule" = "插入水平線";
+"Indent" = "縮進";
+"Outdent" = "减少縮進";
+"InsertLink" = "插入連結";
+"RemoveLink" = "移除連結";
+"QuickLink" = "快速連結";
+"Undo" = "撤銷";
+"Redo" = "重做";
+"BlockQuote" = "引用";
+
+"save" = "保存";
+"more" = "更多";
+
+"photoLibrary" = "從相册中選擇";
+"takePhoto" = "拍照";
+"insertImageFromInternet" = "插入網絡圖片";

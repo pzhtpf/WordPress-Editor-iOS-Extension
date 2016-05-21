@@ -1,14 +1,8 @@
 #import "WPEditorViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
-//#import <UIAlertView+Blocks/UIAlertView+Blocks.h>
 #import <UIKit/UIKit.h>
-//#import <WordPressCom-Analytics-iOS/WPAnalytics.h>
-//#import <WordPress-iOS-Shared/WPFontManager.h>
-//#import <WordPress-iOS-Shared/WPStyleGuide.h>
-//#import <WordPress-iOS-Shared/WPTableViewCell.h>
-//#import <WordPress-iOS-Shared/UIImage+Util.h>
-//#import <WordPress-iOS-Shared/UIColor+Helpers.h>
 
+#import "WPEditorConfiguration.h"
 #import "WPEditorField.h"
 #import "WPEditorToolbarButton.h"
 #import "WPEditorView.h"
@@ -156,6 +150,10 @@ NSInteger const WPLinkAlertViewTag = 92;
     [WPFontManager openSansBoldFontOfSize:16.0];
     [WPFontManager openSansBoldItalicFontOfSize:16.0];
 	
+    WPEditorConfiguration *configuration  = [WPEditorConfiguration sharedWPEditorConfiguration];
+    configuration.localizable = kLMChinese;
+    configuration.insertMedia = @[CustomLocalisedString(@"photoLibrary",@"从相册中选择"),CustomLocalisedString(@"takePhoto",@"拍照"),CustomLocalisedString(@"insertImageFromInternet",@"插入网络图片")];
+    
     [self createToolbarView];
     [self buildTextViews];
 }

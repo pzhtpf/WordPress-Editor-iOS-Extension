@@ -1,0 +1,47 @@
+/* 
+  WordPress-Editor-iOS-Extension_Localizable.strings
+  Pods
+
+  Created by tianpengfei on 16/5/21.
+
+*/
+
+"insertMedia" = "Insert Image,Media";
+"bold" = "Bold";
+"italic" = "Italic";
+"subscript" = "Subscript";
+"superscript" = "Superscript";
+"strikethrough" = "Strikethrough";
+"underline" = "Underline";
+"RemoveFormat" = "RemoveFormat";
+"justifyleft" = "Justifyleft";
+"justifycenter" = "Justifycenter";
+"justifyright" = "Justifyright";
+"justifyfull" = "Justifyfull";
+"H1" = "H1";
+"H2" = "H2";
+"H3" = "H3";
+"H4" = "H4";
+"H5" = "H5";
+"H6" = "H6";
+"textcolor" = "Text Color";
+"backgroundcolor" = "Background Color";
+"UnorderedList" = "Unordered List";
+"OrderedList" = "Ordered List";
+"HorizontalRule" = "HorizontalRule";
+"Indent" = "Indent";
+"Outdent" = "Outdent";
+"InsertLink" = "Insert Link";
+"RemoveLink" = "Remove Link";
+"QuickLink" = "Quick Link";
+"Undo" = "Undo";
+"Redo" = "Redo";
+"BlockQuote" = "BlockQuote";
+
+
+"save" = "Save";
+"more" = "More";
+
+"photoLibrary" = "Photo Library";
+"takePhoto" = "Take Photo";
+"insertImageFromInternet" = "Insert Network Image";

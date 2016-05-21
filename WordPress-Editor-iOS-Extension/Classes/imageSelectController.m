@@ -23,7 +23,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    _data = @[CustomLocalisedString(@"photoLibrary",@"从相册中选择"),CustomLocalisedString(@"takePhoto",@"拍照"),CustomLocalisedString(@"insertImageFromInternet",@"插入网络图片")];
+    WPEditorConfiguration *_WPEditorConfiguration = [WPEditorConfiguration sharedWPEditorConfiguration];
+    
+    _data = _WPEditorConfiguration.insertMedia;
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;

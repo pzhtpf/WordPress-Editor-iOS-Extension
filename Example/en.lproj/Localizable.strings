@@ -11,9 +11,6 @@
 "pleaseInputMessage" = "Please enter the message";
 "published" = "Published";
 "pleaseInputTitle" = "Please enter the title";
-"photoLibrary" = "Photo Library";
-"takePhoto" = "Take Photo";
-"insertImageFromInternet" = "Insert Network Image";
 "isPublishedArticle" = "Published the article?";
 "savedToDraftBox" = "saved to draft box.";
 "publishedArticle" = "Published Article";

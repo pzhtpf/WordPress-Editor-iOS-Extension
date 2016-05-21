@@ -12,6 +12,8 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
+#import "WPEditorConfiguration.h"
+#import "TSLanguageManager.h"
 
 
 @import WordPressShared;
@@ -34,7 +36,6 @@
 
 #define BASECOLOR UIColorFromRGB(0X25be65)
 
+
 #define CustomLocalisedString(key,description)    [TSLanguageManager localizedString:key]
 #define contains(str1, str2) ([str1 rangeOfString: str2 ].location != NSNotFound)
-#define Domain                          @"api.ougohome.com"
-#define BASEURL                         @"http://api.ougohome.com/index.php/"

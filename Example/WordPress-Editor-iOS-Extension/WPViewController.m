@@ -24,6 +24,9 @@
 {
     [super viewDidLoad];
     
+    WPEditorConfiguration *_WPEditorConfiguration = [WPEditorConfiguration sharedWPEditorConfiguration];
+    _WPEditorConfiguration.localizable = kLMDefaultLanguage;
+    
     self.delegate = self;
     
     self.itemTintColor = [UIColor redColor];
@@ -51,16 +54,16 @@
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.leftBarButtonItem = barButton;
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:CustomLocalisedString(@"published", @"发表")
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"published", @"发表")
                                                                               style:UIBarButtonItemStylePlain
                                                                              target:self
                                                                              action:@selector(publishedAction:)];
     
     
-    self.title = CustomLocalisedString(@"publishedArticle", @"发表文章");
+    self.title = NSLocalizedString(@"publishedArticle", @"发表文章");
 
-    self.bodyPlaceholderText = CustomLocalisedString(@"pleaseInputMessage",@"写点什么吧");
-    self.titlePlaceholderText = CustomLocalisedString(@"pleaseInputTitle",@"请输入标题");
+    self.bodyPlaceholderText = NSLocalizedString(@"pleaseInputMessage",@"写点什么吧");
+    self.titlePlaceholderText = NSLocalizedString(@"pleaseInputTitle",@"请输入标题");
 
 }
 -(void)backAction:(UIButton *)back{
@@ -70,7 +73,7 @@
     
     if(_viewModel.content.length>0){
         
-//        _alartViewController = [[AlartViewController alloc] initTitle:CustomLocalisedString(@"sureToSaveDraft", @"是否保留草稿?") positiveButton:CustomLocalisedString(@"sure", @"确认") negativeButton:CustomLocalisedString(@"cancel", @"取消") showCloseButton:NO];
+//        _alartViewController = [[AlartViewController alloc] initTitle:NSLocalizedString(@"sureToSaveDraft", @"是否保留草稿?") positiveButton:NSLocalizedString(@"sure", @"确认") negativeButton:NSLocalizedString(@"cancel", @"取消") showCloseButton:NO];
 //        _alartViewController.expendAbleAlartViewDelegate = self;
 //        _alartViewController.view.tag = 1;
 //        [_alartViewController showView:^(BOOL finished){}];
@@ -96,7 +99,7 @@
     
     if(_viewModel.title.length == 0){
         
-//        _alartViewController = [[AlartViewController alloc] initTitle:CustomLocalisedString(@"pleaseInputTitle",@"请输入标题") positiveButton:nil negativeButton:CustomLocalisedString(@"sure", @"确认")  showCloseButton:NO];
+//        _alartViewController = [[AlartViewController alloc] initTitle:NSLocalizedString(@"pleaseInputTitle",@"请输入标题") positiveButton:nil negativeButton:NSLocalizedString(@"sure", @"确认")  showCloseButton:NO];
 //        _alartViewController.expendAbleAlartViewDelegate = self;
 //        _alartViewController.view.tag = 3;
 //        [_alartViewController showView:^(BOOL finished){}];
@@ -808,7 +811,7 @@
         [formatter setDateFormat:@"HH:mm:ss"];
         
         LNNotification* notification = [LNNotification notificationWithMessage:@"Welcome to LNNotificationsUI!"];
-        notification.title = [NSString stringWithFormat:@"%@ %@",[formatter stringFromDate:dateTime],CustomLocalisedString(@"savedToDraftBox", @"已保存至草稿箱")];
+        notification.title = [NSString stringWithFormat:@"%@ %@",[formatter stringFromDate:dateTime],NSLocalizedString(@"savedToDraftBox", @"已保存至草稿箱")];
         
         [[LNNotificationCenter defaultCenter] presentNotification:notification forApplicationIdentifier:@"com.ougohome.softDecorationMaster"];
     

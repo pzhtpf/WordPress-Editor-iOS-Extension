@@ -11,9 +11,6 @@
 "pleaseInputMessage" = "说点什么吧";
 "published" = "发表";
 "pleaseInputTitle" = "请输入标题";
-"photoLibrary" = "从相册中选择";
-"takePhoto" = "拍照";
-"insertImageFromInternet" = "插入网络图片";
 "isPublishedArticle" = "是否发表?";
 "savedToDraftBox" = "已保存至草稿箱";
 "publishedArticle" = "发表文章";
