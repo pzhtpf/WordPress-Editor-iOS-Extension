@@ -9,12 +9,11 @@
 #import "imageSelectController.h"
 #import "LNNotificationsUI.h"
 
-@interface WPViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, WPImageMetaViewControllerDelegate,imageSelectDelegate>
+@interface WPViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, WPImageMetaViewControllerDelegate>
 @property(nonatomic, strong) NSMutableDictionary *mediaAdded;
 @property(nonatomic, strong) NSString *selectedMediaID;
 @property(nonatomic, strong) NSCache *videoPressCache;
 @property(retain,nonatomic)UIPopoverController *popoverController;
-@property(retain,nonatomic)imageSelectController *imageselectController;
 @property(retain,nonatomic)NSTimer * saveTimer;
 @end
 
@@ -25,9 +24,16 @@
     [super viewDidLoad];
     
     WPEditorConfiguration *_WPEditorConfiguration = [WPEditorConfiguration sharedWPEditorConfiguration];
-    _WPEditorConfiguration.localizable = kLMDefaultLanguage;
     
-    _WPEditorConfiguration.enableImageSelect =   ZSSRichTextEditorImageSelectPhotoLibrary |ZSSRichTextEditorImageSelectTakePhoto;
+// kLMDefaultLanguage  @"en-US"
+// kLMChinese          @"zh-Hans"
+// kLMChineseTW         @"zh-TW"
+// kLMChineseHK         @"zh-HK"
+// kLMChineseT         @"zh-Hant"
+    
+    _WPEditorConfiguration.localizable = kLMChinese;
+    
+    _WPEditorConfiguration.enableImageSelect =   ZSSRichTextEditorImageSelectPhotoLibrary |ZSSRichTextEditorImageSelectTakePhoto|ZSSRichTextEditorImageSelectInsertNetwork;
     
     self.delegate = self;
     
@@ -177,33 +183,11 @@
     return YES;
 }
 
-- (void)editorDidPressMedia:(WPEditorViewController *)editorController
+- (void)editorDidPressMedia:(int)type
 {
     NSLog(@"Pressed Media!");
     
-    if(!_imageselectController){
-    
-        _imageselectController = [[imageSelectController alloc] init];
-        _imageselectController.delegate = self;
-    
-    }
-    
-    CGRect parentFrame = [self.toolbarView  convertRect:self.toolbarView.frame toView:self.view];
-    
-    parentFrame = CGRectMake(20, parentFrame.origin.y,40, parentFrame.size.height);
-    
-    _wypopoverController = [[WYPopoverController alloc] initWithContentViewController:_imageselectController];
-    _wypopoverController.delegate = self;
-    _wypopoverController.popoverContentSize = CGSizeMake(200,132);
-    _wypopoverController.dismissOnTap = YES;
-    [_wypopoverController presentPopoverFromRect:parentFrame inView:self.view permittedArrowDirections:WYPopoverArrowDirectionDown animated:YES];
-
-    
-}
--(void)imageSelectType:(int)type{
-
-    
-    [self selectImageType:type];
+     [self selectImageType:type];
     
 }
 
@@ -834,10 +818,8 @@
     [self setTitle:@""];
     
     _popoverController.delegate = nil;
-    _imageselectController.delegate = nil;
     
     _popoverController = nil;
-    _imageselectController = nil;
     
     if(_saveTimer){
         

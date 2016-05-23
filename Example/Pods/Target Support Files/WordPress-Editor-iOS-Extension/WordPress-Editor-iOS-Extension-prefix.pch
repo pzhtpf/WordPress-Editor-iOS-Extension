@@ -23,6 +23,7 @@
 @import WordPressShared;
 @import WordPressComAnalytics;
 @import UIAlertView_Blocks;
+@import WYPopoverController;
 
 #ifndef IS_IPAD
 #define IS_IPAD   ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
