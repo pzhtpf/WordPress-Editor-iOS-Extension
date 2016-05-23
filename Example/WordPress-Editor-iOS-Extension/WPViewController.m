@@ -27,6 +27,8 @@
     WPEditorConfiguration *_WPEditorConfiguration = [WPEditorConfiguration sharedWPEditorConfiguration];
     _WPEditorConfiguration.localizable = kLMDefaultLanguage;
     
+    _WPEditorConfiguration.enableImageSelect =   ZSSRichTextEditorImageSelectPhotoLibrary |ZSSRichTextEditorImageSelectTakePhoto;
+    
     self.delegate = self;
     
     self.itemTintColor = [UIColor redColor];

@@ -152,7 +152,8 @@ NSInteger const WPLinkAlertViewTag = 92;
 	
     WPEditorConfiguration *configuration  = [WPEditorConfiguration sharedWPEditorConfiguration];
     configuration.localizable = kLMChinese;
-    configuration.insertMedia = @[CustomLocalisedString(@"photoLibrary",@"从相册中选择"),CustomLocalisedString(@"takePhoto",@"拍照"),CustomLocalisedString(@"insertImageFromInternet",@"插入网络图片")];
+    configuration.enableImageSelect =   (ZSSRichTextEditorImageSelectPhotoLibrary |ZSSRichTextEditorImageSelectTakePhoto |
+    ZSSRichTextEditorImageSelectInsertNetwork);
     
     [self createToolbarView];
     [self buildTextViews];
