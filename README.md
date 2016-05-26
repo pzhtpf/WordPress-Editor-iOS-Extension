@@ -42,6 +42,28 @@ pod "WordPress-Editor-iOS-Extension"
 self.itemTintColor = [UIColor redColor];
 ```
 
+2. 你可以设置多语言(you can set language)
+     
+```
+#import "WPEditorConfiguration.h"
+
+    WPEditorConfiguration *_WPEditorConfiguration = [WPEditorConfiguration sharedWPEditorConfiguration];
+    
+// kLMDefaultLanguage  @"en-US"
+// kLMChinese          @"zh-Hans"
+// kLMChineseTW         @"zh-TW"
+// kLMChineseHK         @"zh-HK"
+// kLMChineseT         @"zh-Hant"
+    
+   _WPEditorConfiguration.localizable = kLMChinese;
+```
+
+3. 你可以控制插入图片的几种方式(you can control ways of Insert pictures)
+     
+```
+   _WPEditorConfiguration.enableImageSelect =   ZSSRichTextEditorImageSelectPhotoLibrary |ZSSRichTextEditorImageSelectTakePhoto|ZSSRichTextEditorImageSelectInsertNetwork;
+```
+
 ## Author
 
 tianpengfei, 389744841@qq.com
