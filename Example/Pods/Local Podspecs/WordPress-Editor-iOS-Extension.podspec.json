@@ -1,6 +1,6 @@
 {
   "name": "WordPress-Editor-iOS-Extension",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "Reusable component rich text editor for WordPress.com in an iOS application.",
   "description": "Reusable component rich text editor for WordPress.com in an iOS application.And can allow users to customize the editor toolbar.",
   "homepage": "https://github.com/pzhtpf/WordPress-Editor-iOS-Extension",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/pzhtpf/WordPress-Editor-iOS-Extension.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "8.0"
@@ -33,9 +33,6 @@
     ]
   },
   "dependencies": {
-    "AFNetworking": [
-
-    ],
     "WordPress-iOS-Shared": [
 
     ],

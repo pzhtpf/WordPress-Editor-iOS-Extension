@@ -14,6 +14,18 @@
 
 @implementation imageSelectController
 
+-(id)init{
+
+    self = [super init];
+
+    if(self){
+    
+          _data = [self getData];
+    
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -25,10 +37,9 @@
     
     WPEditorConfiguration *_WPEditorConfiguration = [WPEditorConfiguration sharedWPEditorConfiguration];
     
-    _data = [self getData];
-    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     [self.tableView reloadData];
 }

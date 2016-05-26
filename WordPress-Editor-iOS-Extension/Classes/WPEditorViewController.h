@@ -23,7 +23,7 @@ WPEditorViewControllerMode;
 - (BOOL)editorShouldDisplaySourceView:(WPEditorViewController *)editorController;
 - (void)editorTitleDidChange:(WPEditorViewController *)editorController;
 - (void)editorTextDidChange:(WPEditorViewController *)editorController;
-- (void)editorDidPressMedia:(WPEditorViewController *)editorController;
+- (void)editorDidPressMedia:(int)type;
 
 
 /**

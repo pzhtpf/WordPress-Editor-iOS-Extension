@@ -11,12 +11,13 @@
 
 #import "WPDeviceIdentification.h"
 #import "moreItmsController.h"
+#import "imageSelectController.h"
 
 CGFloat const EPVCStandardOffset = 10.0;
 NSInteger const WPImageAlertViewTag = 91;
 NSInteger const WPLinkAlertViewTag = 92;
 
-@interface WPEditorViewController () <HRColorPickerViewControllerDelegate, UIAlertViewDelegate, WPEditorToolbarViewDelegate, WPEditorViewDelegate,moreItmsDelegate>
+@interface WPEditorViewController () <HRColorPickerViewControllerDelegate, UIAlertViewDelegate, WPEditorToolbarViewDelegate, WPEditorViewDelegate,moreItmsDelegate,imageSelectDelegate>
 
 @property (nonatomic, strong) NSString *htmlString;
 @property (nonatomic, strong) NSArray *editorItemsEnabled;
@@ -25,6 +26,9 @@ NSInteger const WPLinkAlertViewTag = 92;
 @property (nonatomic, strong) NSString *selectedImageAlt;
 @property (nonatomic) BOOL didFinishLoadingEditor;
 @property (nonatomic, weak) WPEditorField* focusedField;
+
+@property(nonatomic,retain) WYPopoverController *wypopoverController;
+@property(retain,nonatomic)imageSelectController *imageselectController;
 
 #pragma mark - Properties: First Setup On View Will Appear
 @property (nonatomic, assign, readwrite) BOOL isFirstSetupComplete;
@@ -741,7 +745,7 @@ NSInteger const WPLinkAlertViewTag = 92;
 													htmlProperty:@"image"
 													   imageName:@"icon_format_media"
 														  target:self
-														selector:@selector(didTouchMediaOptions)
+                                                        selector:@selector(didTouchMediaOptions:)
 											  accessibilityLabel:accessibilityLabel];
 	
     
@@ -1052,12 +1056,39 @@ NSInteger const WPLinkAlertViewTag = 92;
 
 #pragma mark - Actions
 
-- (void)didTouchMediaOptions
+-(void)imageSelectType:(int)type{
+    
+    
+    if ([self.delegate respondsToSelector: @selector(editorDidPressMedia:)]) {
+        [self.delegate editorDidPressMedia:type];
+    }
+    
+}
+
+- (void)didTouchMediaOptions:(WPEditorToolbarButton*)button
 {
     if (self.editorView.isInVisualMode) {
-        if ([self.delegate respondsToSelector: @selector(editorDidPressMedia:)]) {
-            [self.delegate editorDidPressMedia:self];
+        
+        if(!_imageselectController){
+            
+            _imageselectController = [[imageSelectController alloc] init];
+            _imageselectController.delegate = self;
+            
         }
+        
+        CGRect parentFrame = [button convertRect:button.frame toView:self.view];
+        
+        NSArray *data = _imageselectController.data;
+        
+        int height =  _imageselectController.data.count*44;
+        
+        _wypopoverController = [[WYPopoverController alloc] initWithContentViewController:_imageselectController];
+        _wypopoverController.delegate = self;
+        _wypopoverController.popoverContentSize = CGSizeMake(200,height);
+        _wypopoverController.dismissOnTap = YES;
+        [_wypopoverController presentPopoverFromRect:parentFrame inView:self.view permittedArrowDirections:WYPopoverArrowDirectionDown animated:YES];
+        
+        
     } else {
         // Do not allow users to insert images in HTML mode for now
         __weak __typeof(self)weakSelf = self;

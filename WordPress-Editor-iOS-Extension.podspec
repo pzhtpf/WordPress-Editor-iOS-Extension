@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "WordPress-Editor-iOS-Extension"
-s.version          = "0.1.1"
+s.version          = "0.1.2"
 s.summary      = "Reusable component rich text editor for WordPress.com in an iOS application."
 
 # This description is used to generate tags and improve search results.
@@ -42,7 +42,6 @@ s.resource_bundles = {
 
 # s.public_header_files = 'Pod/Classes/**/*.h'
 #  s.frameworks = 'UIKit', 'Foundation'
-s.dependency 'AFNetworking'
 s.dependency 'WordPress-iOS-Shared'
 s.dependency 'WordPressCom-Analytics-iOS'
 s.dependency 'NSObject-SafeExpectations'
