@@ -36,13 +36,13 @@ pod "WordPress-Editor-iOS-Extension"
 
 ##Usage
 
-1. 你可以设置工具栏的主体色(you can set itemTintColor)
+1, 你可以设置工具栏的主体色(you can set itemTintColor)
      
 ```
 self.itemTintColor = [UIColor redColor];
 ```
 
-2. 你可以设置多语言(you can set language)
+2, 你可以设置多语言(you can set language)
      
 ```
 #import "WPEditorConfiguration.h"
@@ -58,7 +58,7 @@ self.itemTintColor = [UIColor redColor];
    _WPEditorConfiguration.localizable = kLMChinese;
 ```
 
-3. 你可以控制插入图片的几种方式(you can control ways of Insert pictures)
+3, 你可以控制插入图片的几种方式(you can control ways of Insert pictures)
      
 ```
    _WPEditorConfiguration.enableImageSelect =   ZSSRichTextEditorImageSelectPhotoLibrary |ZSSRichTextEditorImageSelectTakePhoto|ZSSRichTextEditorImageSelectInsertNetwork;
