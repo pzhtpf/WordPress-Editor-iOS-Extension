@@ -19,11 +19,12 @@
     
     if(self){
     
-        NSString *pathImage = [[NSBundle mainBundle]pathForResource:@"rightArrow.png" ofType:@""];
-        UIImage  *result = [UIImage imageWithContentsOfFile:pathImage];
+        
+        NSString *path = [[NSBundle bundleForClass:[moreItemsCell class]] pathForResource:@"rightArrow" ofType:@"png"];
+        UIImage *image = [UIImage imageWithContentsOfFile:path];
         
         _rightArrowView = [[UIImageView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-40,self.contentView.frame.size.height/2-4, 11, 8)];
-        [_rightArrowView setImage:result];
+        [_rightArrowView setImage:image];
         
         
         [self.contentView addSubview:_rightArrowView];
