@@ -64,6 +64,18 @@ self.itemTintColor = [UIColor redColor];
    _WPEditorConfiguration.enableImageSelect =   ZSSRichTextEditorImageSelectPhotoLibrary |ZSSRichTextEditorImageSelectTakePhoto|ZSSRichTextEditorImageSelectInsertNetwork;
 ```
 
+4, 你可以得到第一张图片的URL，作为封面图(you can get url of first image, as cover image)
+     
+```
+  NSString *cover_image_url = [self.editorView getCoverImage];
+```
+
+5, 你也可以得到所有图片的URL(You'll also be able to get URL of  all the image)
+     
+```
+  NSArray *allImage = [self.editorView getAllImage];
+```
+
 ## Author
 
 tianpengfei, 389744841@qq.com
