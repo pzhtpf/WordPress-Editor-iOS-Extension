@@ -554,7 +554,7 @@ NSInteger const WPLinkAlertViewTag = 92;
 {
 	ZSSBarButtonItem *barButtonItem = [self barButtonItemWithTag:kWPEditorViewControllerElementTagJustifyLeftBarButton
 													htmlProperty:@"justifyLeft"
-													   imageName:@"ZSSleftjustify"
+													   imageName:@"ZSSleftjustify@2x"
 														  target:self
 														selector:@selector(alignLeft)
 											  accessibilityLabel:nil];
@@ -566,7 +566,7 @@ NSInteger const WPLinkAlertViewTag = 92;
 {
 	ZSSBarButtonItem *barButtonItem = [self barButtonItemWithTag:kWPEditorViewControllerElementTagJustifyCenterBarButton
 													htmlProperty:@"justifyCenter"
-													   imageName:@"ZSScenterjustify"
+													   imageName:@"ZSScenterjustify@2x"
 														  target:self
 														selector:@selector(alignCenter)
 											  accessibilityLabel:nil];
@@ -578,7 +578,7 @@ NSInteger const WPLinkAlertViewTag = 92;
 {
 	ZSSBarButtonItem *barButtonItem = [self barButtonItemWithTag:kWPEditorViewControllerElementTagJustifyFullBarButton
 													htmlProperty:@"justifyFull"
-													   imageName:@"ZSSforcejustify"
+													   imageName:@"ZSSforcejustify@2x"
 														  target:self
 														selector:@selector(alignFull)
 											  accessibilityLabel:nil];
@@ -590,7 +590,7 @@ NSInteger const WPLinkAlertViewTag = 92;
 {
 	ZSSBarButtonItem *barButtonItem = [self barButtonItemWithTag:kWPEditorViewControllerElementTagJustifyRightBarButton
 													htmlProperty:@"justifyRight"
-													   imageName:@"ZSSrightjustify"
+													   imageName:@"ZSSrightjustify@2x"
 														  target:self
 														selector:@selector(alignRight)
 											  accessibilityLabel:nil];
@@ -632,7 +632,7 @@ NSInteger const WPLinkAlertViewTag = 92;
 	
 	ZSSBarButtonItem *barButtonItem = [self barButtonItemWithTag:kWPEditorViewControllerElementTagBoldBarButton
 													htmlProperty:@"bold"
-													   imageName:@"icon_format_bold"
+													   imageName:@"icon_format_bold@2x"
 														  target:self
 														selector:@selector(setBold)
 											  accessibilityLabel:accessibilityLabel];
@@ -644,7 +644,7 @@ NSInteger const WPLinkAlertViewTag = 92;
 {
 	ZSSBarButtonItem *barButtonItem = [self barButtonItemWithTag:kWPEditorViewControllerElementTagH1BarButton
 													htmlProperty:@"h1"
-													   imageName:@"ZSSh1"
+													   imageName:@"ZSSh1@2x"
 														  target:self
 														selector:@selector(heading1)
 											  accessibilityLabel:nil];

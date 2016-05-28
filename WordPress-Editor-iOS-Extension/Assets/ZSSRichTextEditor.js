@@ -2785,7 +2785,23 @@ ZSSEditor.getCoverImage = function(){
         coverImageUrl = coverImage.attr("src");
     
     return coverImageUrl;
-}
+};
+
+ZSSEditor.getAllImage = function(){
+    
+    var imageUrl = "";
+    
+    $("img").each(function(){
+                 
+                  imageUrl = imageUrl + $(this).attr("src")+";";
+                
+                  });
+    
+    return imageUrl;
+};
+
+
+
 
 // MARK: - Wrapped Object
 

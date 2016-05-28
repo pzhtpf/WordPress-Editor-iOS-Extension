@@ -1,5 +1,4 @@
 #import "WPEditorToolbarButton.h"
-//#import <WordPress-iOS-Shared/WPStyleGuide.h>
 @import WordPressShared;
 
 static NSString* const CircleLayerKey = @"circleLayer";

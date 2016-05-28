@@ -107,28 +107,31 @@
     
     if(_viewModel.title.length == 0){
         
-//        _alartViewController = [[AlartViewController alloc] initTitle:NSLocalizedString(@"pleaseInputTitle",@"请输入标题") positiveButton:nil negativeButton:NSLocalizedString(@"sure", @"确认")  showCloseButton:NO];
-//        _alartViewController.expendAbleAlartViewDelegate = self;
-//        _alartViewController.view.tag = 3;
-//        [_alartViewController showView:^(BOOL finished){}];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"pleaseInputTitle",@"请输入标题") message:NSLocalizedString(@"pleaseInputTitle",@"请输入标题") delegate:nil cancelButtonTitle:NSLocalizedString(@"sure", @"确认") otherButtonTitles:nil, nil];
+        
+         [alertView show];
         
         return;
     }
     
     
     
-    if(_viewModel.content.length>0){
+    if(_viewModel.content.length==0){
         
  
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"pleaseInputMessage",@"请输入内容") message:NSLocalizedString(@"pleaseInputMessage",@"请输入内容") delegate:nil cancelButtonTitle:NSLocalizedString(@"sure", @"确认") otherButtonTitles:nil, nil];
+        
+        [alertView show];
+        
         return;
         
     }
     else{
         
-
+        _viewModel.cover_image_url = [self.editorView getCoverImage];
+        NSArray *allImage = [self.editorView getAllImage];
         
-        return;
-        
+        NSLog(@"Image Count:%ld",allImage.count);
         
     }
     

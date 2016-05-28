@@ -1992,7 +1992,26 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
    return [self.webView stringByEvaluatingJavaScriptFromString:trigger];
 
 }
-
+- (NSArray *)getAllImage
+{
+    NSString *trigger = @"ZSSEditor.getAllImage();";
+    
+    [self callDelegateEditorTextDidChange];
+    
+    NSString *imageUrl = [self.webView stringByEvaluatingJavaScriptFromString:trigger];
+    
+    NSArray *arrayUrl = [imageUrl componentsSeparatedByString:@";"];
+    
+    NSMutableArray *mutableArrayUrl = [NSMutableArray new];
+    
+    for (NSString *url in arrayUrl) {
+        
+        if(url.length>0)
+            [mutableArrayUrl addObject:url];
+    }
+    
+    return mutableArrayUrl;
+}
 
 
 #pragma mark - UITextViewDelegate
