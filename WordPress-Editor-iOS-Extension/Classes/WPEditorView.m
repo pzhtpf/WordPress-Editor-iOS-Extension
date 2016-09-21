@@ -81,6 +81,8 @@ static NSString* const WPEditorViewWebViewContentSizeKey = @"contentSize";
 		CGRect childFrame = frame;
 		childFrame.origin = CGPointZero;
 		
+        _showTitleField = true;
+        
         [self createSourceTitleViewWithFrame: childFrame];
         [self createSourceDividerViewWithFrame:CGRectMake(0.0f, CGRectGetMaxY(self.sourceViewTitleField.frame), CGRectGetWidth(childFrame), 1.0f)];
         CGRect sourceViewFrame = CGRectMake(0.0f,
@@ -105,6 +107,12 @@ static NSString* const WPEditorViewWebViewContentSizeKey = @"contentSize";
     }
 }
 
+#pragma mark setter
+-(void)setShowTitleField:(BOOL)showTitleField{
+
+    _showTitleField = showTitleField;
+    [self showTitle:_showTitleField];
+}
 #pragma mark - Init helpers
 
 - (void)createSourceTitleViewWithFrame:(CGRect)frame
@@ -426,6 +434,10 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+
+    
+    [self showTitle:_showTitleField];
+    
 	if ([self.delegate respondsToSelector:@selector(editorViewDidFinishLoading:)]) {
 		[self.delegate editorViewDidFinishLoading:self];
 	}
@@ -2012,7 +2024,22 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     
     return mutableArrayUrl;
 }
+- (void)atUser:(NSString *)text url:(NSString *)url{
 
+    NSString *trigger = [NSString stringWithFormat:@"ZSSEditor.atUser('%@','%@');",text,url];
+    
+    [self callDelegateEditorTextDidChange];
+    
+    [self.webView stringByEvaluatingJavaScriptFromString:trigger];
+}
+- (void)showTitle:(BOOL)showTitleField{
+
+    NSString *trigger =  [NSString stringWithFormat:@"ZSSEditor.showTitle(%d);",showTitleField];
+    
+    [self callDelegateEditorTextDidChange];
+    
+    [self.webView stringByEvaluatingJavaScriptFromString:trigger];
+}
 
 #pragma mark - UITextViewDelegate
 

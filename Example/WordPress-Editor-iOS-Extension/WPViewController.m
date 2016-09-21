@@ -38,6 +38,7 @@
     self.delegate = self;
     
     self.itemTintColor = [UIColor redColor];
+//    self.editorView.showTitleField = NO;     // 控制title 输入框是否显示
     
     [self initView];
     

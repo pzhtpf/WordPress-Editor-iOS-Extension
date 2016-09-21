@@ -195,6 +195,7 @@ stylesForCurrentSelection:(NSArray*)styles;
 @property (nonatomic, weak, readonly) WPEditorField* focusedField;
 @property (nonatomic, strong, readonly) WPEditorField* titleField;
 @property (nonatomic, strong, readonly) UITextField *sourceViewTitleField;
+@property(nonatomic) BOOL showTitleField;
 
 #pragma mark - Properties: Subviews
 @property (nonatomic, strong, readonly) ZSSTextView *sourceView;
@@ -475,4 +476,6 @@ stylesForCurrentSelection:(NSArray*)styles;
 - (void)removeFormat;
 - (NSString *)getCoverImage;
 - (NSArray *)getAllImage;
+- (void)atUser:(NSString *)text url:(NSString *)url;
+- (void)showTitle:(BOOL)showTitleField;
 @end

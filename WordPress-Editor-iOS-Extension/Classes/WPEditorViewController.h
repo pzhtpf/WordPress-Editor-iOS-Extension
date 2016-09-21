@@ -1,9 +1,10 @@
 #import <UIKit/UIKit.h>
 #import "HRColorPickerViewController.h"
 #import "WPEditorToolbarView.h"
+#import "WPEditorView.h"
 
 @class WPEditorField;
-@class WPEditorView;
+//@class WPEditorView;
 @class WPEditorViewController;
 @class WPImageMeta;
 
