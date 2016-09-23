@@ -76,9 +76,9 @@ body {
 }
 
 p {
-    line-height: 24px;
+    line-height: 22px;
     margin-top: 0px;
-    margin-bottom: 24px;
+    margin-bottom: 0px;
 }
 
 hr {

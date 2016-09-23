@@ -22,6 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setEdgesForExtendedLayout:UIRectEdgeNone];
     
     WPEditorConfiguration *_WPEditorConfiguration = [WPEditorConfiguration sharedWPEditorConfiguration];
     
@@ -96,6 +97,17 @@
     
     }];
 
+}
+-(void)viewWillAppear:(BOOL)animated{
+
+    // 测试 atUser 方法
+    
+    [self.editorView restoreSelection];
+//    [self.editorView atUser:@"@RocTian" url:@"http://www.baidu.com"];
+}
+-(void)viewWillDisappear:(BOOL)animated{
+
+    [self.editorView saveSelection];
 }
 
 -(void)publishedMethod{
