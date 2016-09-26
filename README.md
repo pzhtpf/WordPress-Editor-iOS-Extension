@@ -76,6 +76,18 @@ self.itemTintColor = [UIColor redColor];
   NSArray *allImage = [self.editorView getAllImage];
 ```
 
+6, 你可以控制title 输入框是否显示
+     
+```
+  self.editorView.showTitleField = NO;
+```
+
+7, 你可以@其他人
+     
+```
+  [self.editorView atUser:@"@RocTian" url:@"http://www.baidu.com"];
+```
+
 ## Author
 
 tianpengfei, 389744841@qq.com
